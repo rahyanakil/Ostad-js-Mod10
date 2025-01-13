@@ -1,0 +1,48 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>COUNTER APP</h2>
+<button id="btn" onclick="counter()"> The count number is  </button>
+<p id="showCounter"></p>
+
+
+
+<script>
+const Result = document.getElementById("showCounter");
+const Button = document.getElementById("btn");
+var count =0;
+ function counter(){
+ count++;
+ Result.innerHTML = count;
+ console.log(count);
+ }
+</script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<body>
+   <button id="my-button">Click Me</button>
+   <div id="click-count">Button clicked: 0 times</div>
+   <script>
+      let button = document.getElementById("my-button");
+      let clickCount = 0;
+      let display = document.getElementById("click-count");
+      if (localStorage.getItem("clickCount")) {
+         clickCount = parseInt(localStorage.getItem("clickCount"));
+      }
+      button.addEventListener("click", function() {
+         clickCount++;
+         display.innerHTML = "Button clicked: " +  clickCount + " times";
+         localStorage.setItem("clickCount", clickCount);
+      });
+   </script>
+</body>
+</html> 
